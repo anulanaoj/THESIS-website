@@ -3,52 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3.interaction with</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <title>3. Interaction with</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external stylesheet -->
     <style>
-        body {
-            margin: 0; /* Remove default margin */
-            width: 100vw; /* Full width of the viewport */
-            height: 100vh; /* Full height of the viewport */
-            background-color: #e5e5e5; /* White background */
-            overflow: hidden; /* Prevent scrolling */
-            position: fixed; /* Fix all elements in place */
+        /* General styles */
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Century Schoolbook', serif;
+            background-color: lch(100% 0.01 296.81);
+            overflow-x: hidden;
+            box-sizing: border-box;
         }
 
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
 
+        /* Header styles */
         .header {
-            background-color: #adadad; /* Light grey background */
-            padding: 0%; /* Padding around the header */
-            height: 5vh; /* Height of the header */
-            display: flex; /* Flexbox for alignment */
-            position: relative; /* Position relative for absolute positioning of child elements */
-            outline:#062ade solid 1px; /* Outline around the header */
-
+            position: relative;
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            width: 100vw;
+            height: 150vh; /* Adjust header height */
+            overflow: hidden;
         }
+
         .header h1 {
-            margin: 0; /* Remove default margin */
-            font-size: 2em; /* Font size for the header */
-            color: #062ade; /* Dark grey text color */
-            font-family: 'Arial', sans-serif; /* Font family for the header */
-            left: 50%; /* Center the header horizontally */
-    
-            position: absolute; /* Position absolute for centering */
-
+            font-size: 2em;
+            font-weight: 400;
+            color: #1700e1;
+            text-align: center;
+            z-index: 2;
+            position: absolute; /* Added position property */
+            left: 60%;
+            top: 40%; /* Center vertically */
+            transform: translateX(-50%); /* Center horizontally */
         }
 
+        .header img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure image covers the header area */
+            z-index: 1;
+        }
+
+        /* Container styles */
+        .container-one {
+            display: flex; /* Enable Flexbox */
+            flex-direction: row; /* Arrange items in a row */
+            align-items: flex-start; /* Align items at the top */
+            justify-content:flex-start; /* Add space between the text and the image */
+            padding: 0px; /* Add padding for spacing */
+            background-color: lch(100% 0.01 296.81); /* Background color */
+            max-width: 100vw; /* Center and limit the container’s width */
+            margin: 0px; /* Center the container on the page */
+            gap: 0px; /* Space between text and image */
+            height: 100vh;
+        }
+
+        /* Text styling */
+        .container-one p {
+            flex: 1; /* Allow the text to take available space */
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #48A62E;
+            text-align: justify;
+            margin: 0;
+            padding: 5%; /* Add padding for spacing */
+        }
+
+        /* Image styling */
+        .container-one img {
+            flex: 0; /* Prevent the image from growing or shrinking */
+            max-width: 300px; /* Limit the image width */
+            height: auto; /* Maintain aspect ratio */
+            padding: 5%;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .container-one {
+                flex-direction: column; /* Stack items vertically on smaller screens */
+                text-align: center;
+            }
+
+            .container-one img {
+                max-width: 100%; /* Allow the image to take full width */
+                margin: 0 auto; /* Center the image */
+            }
+
+            .container-one p {
+                max-width: 100%; /* Allow the text to take full width */
+                margin: 0 auto; /* Center the text */
+            }
+        }
+
+        .container-two {
+            display: flex; /* Enable Flexbox */
+            flex-direction: row; /* Arrange items in a row */
+            align-items: center; /* Align items at the center */
+            justify-content: center; /* Center items horizontally */
+            padding: 0px; /* Add padding for spacing */
+            background-color: lch(62.83% 68.51 133.27); /* Background color */
+            max-width: 100vw; /* Center and limit the container’s width */
+            margin: 0px; /* Center the container on the page */
+            height: 100vh;
+        }
+        
+        /* Text styling for container-two */
+        .container-two p {
+            flex: 1; /* Allow the text to take available space */
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #081804;
+            text-align: justify;
+            margin: 0;
+            padding: 5%; /* Add padding for spacing */
+            width: 50vw;
+        }
+
+        /* Image styling for container-two */
+        .container-two img {
+            flex: 0; /* Prevent the image from growing or shrinking */
+            max-width: 300px; /* Limit the image width */
+            height: auto; /* Maintain aspect ratio */
+            padding: 5%;
+        }
     </style>
-    </head>
+</head>
 
-    <body>
-        
-        <div class="header">
-            <h1>3. Interaction with</h1>
-        </div>
-        
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>3. Interaction with</h1>
+        <img src="3/IMG_0484.jpg" alt="Landscape background">
+    </div>
 
-    
+    <!-- Text and Image Section -->
+    <div class="container-one">
+        <p>
+            Landscape is a selected area—objectified—of land that one looks at, not something, by designation, that one is part of. In the context of a landscape, a postcard, there is distance between person and place; it is a term that differentiates person, looker, from place, look-ee.<br><br>
+            Acts of interaction with these settings are meant to facilitate a conscious embodiment of the body itself, in order to take a step inside this landscape. It is by assuming the position of yourself within your borders that they dissipate, and you become welcome to start touching the world. I propose the subject to come nearer to the object surrounding them, on the same plane.<br><br>
+            If you put yourself on a different plane, you can’t touch the original one. We do not walk on nature; we walk in nature. Acts done in the purview of this research, be they done on the island or in the studio, call for this merging of parts. A conciliation of the physical with the felt in efforts to shorten the distance with what is perceived (what is there) and what is felt (what is sensed).<br><br>
+            Applying formal visual exercises as interactions with the world is a method of engaging. Interaction is a way of returning to what is there. This makes things in the world closer to us, as well as allowing for a dialogue with it. You hear what is said to you; you acknowledge and participate. These happenings are opportunities for letting go of any hesitation involving contact with an exterior element. Fear of contact reinforces separation between self and world. To make the external internal, and the internal external, is to practice mutual transformation.
+        </p>
+        <img src="3/PXL_20240727_173826963.jpg" alt="Interaction example" style="width: 40vw; height: auto; max-width: 50vw; margin-left: 0vw; margin-top: 0vh;">
+    </div>
+
+    <div class = "container-two">
+        <p>
 
 
+        </p>
 
-        </body>
-    </html>
+    </div>
+</body>
+</html>
